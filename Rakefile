@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-OverwatchWeb::Application.load_tasks
+Overwatch::Web::Application.load_tasks

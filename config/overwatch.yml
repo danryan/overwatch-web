@@ -1,0 +1,9 @@
+collection:
+  storage:
+    adapter: 'redis'
+    db: '10'
+    host: 'localhost'
+    port: '6379'
+web:
+  collection: 'http://localhost:9001'
+  events: 'http://localhost:9002'

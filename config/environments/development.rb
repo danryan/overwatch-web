@@ -1,4 +1,4 @@
-OverwatchWeb::Application.configure do
+Overwatch::Web::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
@@ -27,4 +27,9 @@ OverwatchWeb::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  if $0 == "irb"
+    config.logger = Logger.new(STDOUT)
+  else
+    config.logger = Logger.new(Rails.root.join("log",Rails.env + ".log"),3,5*1024*1024)  
+  end
 end

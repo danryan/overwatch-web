@@ -1,11 +1,13 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
-
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
-
+gem 'slim'
+# gem 'dm-rails', '1.2.0.rc2'
+# gem 'dm-redis-adapter'
+gem 'jquery-rails'
+gem 'rest-client'
+gem 'ascribe', '>= 0.0.7'
+gem 'yajl-ruby', :require => 'yajl'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -15,17 +17,6 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
-
+group :development, :test do
+ gem 'rspec-rails'
+end
